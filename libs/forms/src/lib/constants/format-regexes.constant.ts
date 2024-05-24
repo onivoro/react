@@ -13,7 +13,7 @@ export const formatRegexes = {
   passwordNumber: /\d/,
   passwordUpper: /[A-Z]/,
   passwordLower: /[a-z]/,
-  passwordSpecial: /\^|\$|\*|\.|\?|-|!|@|#|%|>|<|:|;|_|~|\+|=/;
+  passwordSpecial: /\^|\$|\*|\.|\?|-|!|@|#|%|>|<|:|;|_|~|\+|=/,
   ssn: /^\d{3}-\d{2}-\d{4}$/,
   numeric: /^(\d|\.)*$/,
   duns: /^\d{9}$/,
