@@ -85,3 +85,5 @@ override.tf.json
 .terraformrc
 terraform.rc
 .nx/cache
+
+storybook-static
