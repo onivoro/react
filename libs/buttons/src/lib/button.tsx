@@ -1,5 +1,7 @@
 import { ComponentProps } from "react";
 
+import '../index.css';
+
 export type ButtonsProps = ComponentProps<"button"> & { children: any };
 
 export function Button({ children, ...props }: ButtonsProps) {

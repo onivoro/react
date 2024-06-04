@@ -1,6 +1,8 @@
 import { PropsWithChildren, FC, useRef, useState, ChangeEvent } from 'react';
 import { FieldValues, FormState, useForm } from 'react-hook-form';
 
+import '../../index.css';
+
 export type TFilePickerData = { file: File, content: string };
 export type TFilePickerWithFilesRenderer = (params: { formState: FormState<FieldValues>, handleReset: () => any, data: TFilePickerData }) => any;
 export type TFilePickerWithoutFilesRenderer = (params: { browse: () => any }) => any;

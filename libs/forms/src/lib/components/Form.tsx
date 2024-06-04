@@ -5,6 +5,8 @@ import { TFormLayout } from '../types/form-layout.type';
 import { TControlRenderer } from '../types/control-renderer.type';
 import { getErrorMessage } from '../functions/get-error-message.function';
 
+import '../../index.css';
+
 export function Form<TFormData>({ config, layout, value, controlRenderer, onSubmit, headerRenderer }: { config: TFormFields<TFormData>, layout: TFormLayout<TFormData>, value?: TFormData, controlRenderer?: TControlRenderer, headerRenderer?: TControlRenderer, onSubmit: (value: TFormData, form?: UseFormReturn<FieldValues>) => any }) {
 
     const form = useForm({ mode: "onChange", values: value as any });
