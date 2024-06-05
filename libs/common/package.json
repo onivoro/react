@@ -1,6 +1,6 @@
 {
   "name": "@onivoro/react-common",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "./index.js",
   "types": "./index.d.ts",
   "exports": {
@@ -10,6 +10,8 @@
     }
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.2.5",
+    "react-router-dom": "6.11.2",
     "universal-cookie": "^7.1.4"
   }
 }
