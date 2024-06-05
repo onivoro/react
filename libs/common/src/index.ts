@@ -1,5 +1,8 @@
 export * from './lib/classes/in-memory-file-service.class';
 
+export * from './lib/constants/dispatcher.constant';
+export * from './lib/constants/router.constant';
+
 export * from './lib/functions/create-api.function';
 export * from './lib/functions/create-axios-instance.function';
 export * from './lib/functions/create-cookie-service.function';
