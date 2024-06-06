@@ -1,4 +1,4 @@
 import { RouteObject } from "react-router-dom";
-import { TLoaderFactory } from "./loader-factory.type";
+import { TStateAwareLoaderFactory } from "./state-aware-loader-factory.type";
 
-export type TRoute = RouteObject & { loaderFactory: TLoaderFactory };
+export type TRoute = RouteObject & { loaderFactory: TStateAwareLoaderFactory };
