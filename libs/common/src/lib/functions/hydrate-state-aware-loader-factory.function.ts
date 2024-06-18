@@ -1,6 +1,7 @@
 import { Dispatch } from "@reduxjs/toolkit";
 import { RouteObject } from "react-router-dom";
 import { TRoute } from '../types/route.type';
+import { selectFactory } from "./select-factory.function";
 
 export function hydrateStateAwareLoaderFactory(route: TRoute | RouteObject, dispatch: Dispatch<any>, { getState }: { getState: () => any }) {
   return {
@@ -12,7 +13,3 @@ export function hydrateStateAwareLoaderFactory(route: TRoute | RouteObject, disp
       })
   };
 }
-
-const selectFactory = ({ getState }: { getState: () => any }) => (selector: (state: any) => any) => {
-  return selector(getState());
-};

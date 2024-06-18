@@ -1,6 +1,6 @@
 {
   "name": "@onivoro/react-buttons",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "./index.js",
   "types": "./index.d.ts",
   "exports": {
@@ -8,5 +8,9 @@
       "import": "./index.mjs",
       "require": "./index.js"
     }
+  },
+  "peerDependencies": {
+    "react": "18.2.0",
+    "styled-components": "^6.1.11"
   }
 }

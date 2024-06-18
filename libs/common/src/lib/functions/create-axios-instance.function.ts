@@ -3,7 +3,7 @@ import { TApiConfig } from '../types/api-config.type';
 
 export function createAxiosInstance(config: TApiConfig) {
 
-  const { on200, on401, on403, on400, on500, addHeaders, onRequest, onResponse } = config;
+  const { onError, on401, on403, on400, on500, addHeaders, onRequest, onResponse } = config;
 
   const instance = axios.create();
 
@@ -35,11 +35,11 @@ export function createAxiosInstance(config: TApiConfig) {
     (err) => {
       console.warn({ err, msg: 'axiosInstanceFactory error' });
 
-      if (err?.response?.status === 200) {
-        if (typeof on200 === 'function') {
-          on200(err?.response);
-        }
-      } else if (err?.response?.status === 400) {
+      if (typeof onError === 'function') {
+        onError(err?.response);
+      }
+
+      if (err?.response?.status === 400) {
         if (typeof on400 === 'function') {
           on400(err?.response);
         }
