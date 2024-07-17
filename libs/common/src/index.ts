@@ -10,6 +10,7 @@ export * from './lib/functions/create-cookie-service.function';
 export * from './lib/functions/decode-token.function';
 export * from './lib/functions/extract-decoded-token.function';
 export * from './lib/functions/extract-token-expiration.function';
+export * from './lib/functions/extract-value-from-query-string.function';
 export * from './lib/functions/hydrate-state-aware-loader-factory.function';
 export * from './lib/functions/path-to-url.function';
 export * from './lib/functions/select-factory.function';
