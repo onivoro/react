@@ -33,27 +33,29 @@ export function createAxiosInstance(config: TApiConfig) {
       return response;
     },
     (err) => {
+      const defaultError = {config: {}};
+
       console.warn({ err, msg: 'axiosInstanceFactory error' });
 
       if (typeof onError === 'function') {
-        onError(err?.response || {});
+        onError(err?.response || defaultError);
       }
 
       if (err?.response?.status === 400) {
         if (typeof on400 === 'function') {
-          on400(err?.response || {});
+          on400(err?.response || defaultError);
         }
       } else if (err?.response?.status === 401) {
         if (typeof on401 === 'function') {
-          on401(err?.response || {});
+          on401(err?.response || defaultError);
         }
       } else if (err?.response?.status === 403) {
         if (typeof on403 === 'function') {
-          on403(err?.response || {});
+          on403(err?.response || defaultError);
         }
       } else if (err?.response?.status === 500) {
         if (typeof on500 === 'function') {
-          on500(err?.response || {});
+          on500(err?.response || defaultError);
         }
       } else {
         throw err;
