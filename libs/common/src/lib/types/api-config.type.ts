@@ -1,6 +1,6 @@
 export type TApiConfig = {
     apiUrl: string,
-    uiUrl: string,
+    uiUrl?: string,
     addHeaders?: (req: any) => Record<string, string>,
     on400?: (response: any) => any,
     on401?: (response: any) => any,
