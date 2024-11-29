@@ -9,7 +9,5 @@
       "require": "./index.js"
     }
   },
-  "dependencies": {
-    "react-hook-form": "^7.51.4"
-  }
+  "dependencies": {}
 }

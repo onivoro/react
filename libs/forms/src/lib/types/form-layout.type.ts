@@ -1,3 +1,5 @@
 type TFormFieldName<TFormData> = keyof TFormData;
-type TArbitraryRenderer = () => any;
-export type TFormLayout<TFormData> = Array<Array<TArbitraryRenderer | TFormFieldName<TFormData>>>;
+type TArbitraryRendererWithValue<TFormData> = (value: TFormData, formState: any, form: any) => any;
+type TArbitraryRendererWithoutValue = () => any;
+type TArbitraryRenderer<TFormData> = TArbitraryRendererWithValue<TFormData> | TArbitraryRendererWithoutValue;
+export type TFormLayout<TFormData> = Array<Array<TArbitraryRenderer<TFormData> | TFormFieldName<TFormData>>>;

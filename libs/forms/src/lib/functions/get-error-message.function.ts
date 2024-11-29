@@ -1,5 +1,5 @@
-import { IFieldOption } from "../types/field-option.interface";
 import { formatRegexes } from "../constants/format-regexes.constant";
+import { IFieldOption } from "../types/field-option.interface";
 
 const pwSpecial = formatRegexes.passwordSpecial.toString();
 const pwSpecialChars = pwSpecial

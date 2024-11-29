@@ -1,7 +1,4 @@
-export * from './lib/components/FilePicker';
-export * from './lib/components/Form';
-
-export * from './lib/constants/format-regexes.constant';
+export * from './lib/components/ManagedForm';
 
 export * from './lib/functions/get-error-message.function';
 
