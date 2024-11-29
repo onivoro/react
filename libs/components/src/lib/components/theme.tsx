@@ -1,7 +1,5 @@
-import { ComponentProps, FC, PropsWithChildren } from 'react';
-import { css, styled } from 'styled-components';
-
-
+import { FC, PropsWithChildren } from 'react';
+import { styled } from 'styled-components';
 
 export type TThemeProps = {
     base: string,
@@ -34,14 +32,16 @@ export const StyledTheme: FC<PropsWithChildren<TStyledThemeProps>> = styled.div`
     --oni-warn: ${props => props.$warn};
     --oni-danger: ${props => props.$danger};
 
-    --oni-background-color: ${props => props.$base};
-    --oni-color: ${props => props.$contrast};
+    font-family: ${props => props.$font};
 
-    font-family: ${props => props.$font}
+    --oni-background-color: ${props => props.$contrast};
+    --oni-color: ${props => props.$base};
+    --oni-color-muted: ${props => `${props.$base}99`};
 
     @media (prefers-color-scheme: dark) {
-        --oni-background-color: ${props => props.$contrast};
-        --oni-color: ${props => props.$base};
+        --oni-background-color: ${props => props.$base};
+        --oni-color: ${props => props.$contrast};
+        --oni-color-muted: ${props => `${props.$contrast}99`};
     }
 `;
 
