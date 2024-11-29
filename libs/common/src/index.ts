@@ -18,5 +18,6 @@ export * from './lib/functions/url-to-path.function';
 
 export * from './lib/types/api-config.type';
 export * from './lib/types/entity-state.type';
+export * from './lib/types/props.type';
 export * from './lib/types/state-aware-loader-factory.type';
 export * from './lib/types/route.type';

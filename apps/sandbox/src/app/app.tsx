@@ -1,49 +1,32 @@
-import NxWelcome from './nx-welcome';
-
-import { Route, Routes, Link } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
+import LoginPage from './login.page';
+import { Body, Theme } from '@onivoro/react-components';
 
 export function App() {
   return (
-    <div>
-      <NxWelcome title="sandbox" />
-
-      {/* START: routes */}
-      {/* These routes and navigation have been generated for you */}
-      {/* Feel free to move and update them to fit your needs */}
-      <br />
-      <hr />
-      <br />
-      <div role="navigation">
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/page-2">Page 2</Link>
-          </li>
-        </ul>
-      </div>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <div>
-              This is the generated root route.{' '}
-              <Link to="/page-2">Click here for page 2.</Link>
-            </div>
-          }
-        />
-        <Route
-          path="/page-2"
-          element={
-            <div>
-              <Link to="/">Click here to go back to root page.</Link>
-            </div>
-          }
-        />
-      </Routes>
-      {/* END: routes */}
-    </div>
+    <Theme
+      base='#020620'
+      contrast='#E6FAFC'
+      primary='#B18FCF'
+      success='#3A7D44'
+      info='#5D737E'
+      warn='#FABC2A'
+      danger='#FF5714'
+      font={`'Segoe UI', system-ui, ui-serif, ui-sans-serif, ui-rounded, ui-monospace;`}
+    >
+      <Body style={{padding: '1rem'}}>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <div>
+                <LoginPage></LoginPage>
+              </div>
+            }
+          />
+        </Routes>
+      </Body>
+    </Theme>
   );
 }
 

@@ -17,8 +17,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@onivoro/react-buttons": ["libs/buttons/src/index.ts"],
       "@onivoro/react-common": ["libs/common/src/index.ts"],
+      "@onivoro/react-components": ["libs/components/src/index.ts"],
       "@onivoro/react-forms": ["libs/forms/src/index.ts"]
     }
   },

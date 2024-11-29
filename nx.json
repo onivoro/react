@@ -58,34 +58,21 @@
     "sharedGlobals": []
   },
   "generators": {
-    "@nx/angular:application": {
-      "style": "scss",
-      "linter": "eslint",
-      "unitTestRunner": "jest",
-      "e2eTestRunner": "none"
-    },
-    "@nx/angular:library": {
-      "linter": "eslint",
-      "unitTestRunner": "jest"
-    },
-    "@nx/angular:component": {
-      "style": "scss"
-    },
     "@nx/workspace:move": {
       "projectNameAndRootFormat": "as-provided"
     },
     "@nx/react": {
       "application": {
         "babel": true,
-        "style": "tailwind",
+        "style": "css",
         "linter": "eslint",
         "bundler": "vite"
       },
       "component": {
-        "style": "tailwind"
+        "style": "css"
       },
       "library": {
-        "style": "tailwind",
+        "style": "css",
         "linter": "eslint",
         "unitTestRunner": "jest"
       }
